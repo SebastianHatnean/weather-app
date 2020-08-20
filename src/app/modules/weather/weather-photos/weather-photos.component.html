@@ -1,0 +1,25 @@
+<app-top-bar></app-top-bar>
+<div>
+  <h1 class="center">Stunning wordwide weather photos</h1>
+  <mat-card *ngFor="let photoData of photosData" class="mat-elevation-z18">
+    <mat-card-header>
+      <mat-card-title>
+        <span>{{ photoData.title }}</span>
+      </mat-card-title>
+    </mat-card-header>
+    <mat-card-content>
+      <mat-list>
+        <div class="photos-section">
+          <div class="thumbnail-section">
+            <span>Album number: {{ photoData.albumId }}</span>
+            <img [src]="photoData.thumbnailUrl" alt="" class="thumbnail" />
+          </div>
+          <div class="photo-section">
+            <span>Photo number: {{ photoData.id }}</span>
+            <img [src]="photoData.url" alt="" class="big-photo" />
+          </div>
+        </div>
+      </mat-list>
+    </mat-card-content>
+  </mat-card>
+</div>

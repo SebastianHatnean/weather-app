@@ -1,0 +1,20 @@
+#title {
+  margin-right: 30px;
+}
+.mat-button {
+  height: 33px;
+}
+.mat-toolbar {
+  background-color: #134b59d1;
+  color: white;
+  justify-content: space-between;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+}
+
+a:hover {
+  color: #e0f9ffd1;
+}

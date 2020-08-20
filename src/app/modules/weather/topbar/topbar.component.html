@@ -1,0 +1,14 @@
+<mat-toolbar>
+  <a id="title" href="/">Weather App</a>
+  <button mat-raised-button color="accent" (click)="openModal()" *ngIf="loc">
+    Change location
+  </button>
+  <button
+    mat-raised-button
+    color="accent"
+    [routerLink]="['/weather-photos']"
+    routerLinkActive="active"
+  >
+    Check 5000 stunning weather photos
+  </button>
+</mat-toolbar>

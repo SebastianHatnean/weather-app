@@ -1,0 +1,42 @@
+<app-top-bar></app-top-bar>
+<div id="container">
+  <div *ngIf="!loc" id="search">
+    <mat-card class="example-card">
+      <mat-card-header>
+        <div mat-card-avatar>
+          <mat-icon aria-hidden="false" aria-label="Example home icon"
+            >wb_sunny</mat-icon
+          >
+        </div>
+        <mat-card-title>Enter location to find weather info</mat-card-title>
+      </mat-card-header>
+      <img mat-card-image src="../../../../assets/weather1.jpg" alt="clouds" />
+      <form [formGroup]="locationForm" (ngSubmit)="onSubmit()">
+        <mat-card-content>
+          <mat-form-field>
+            <input
+              type="text"
+              matInput
+              placeholder="Type location"
+              formControlName="location"
+              autocomplete="off"
+            />
+            <mat-hint>Please enter a valid location.</mat-hint>
+            <mat-error>Invalid or missing location.</mat-error>
+          </mat-form-field>
+
+        </mat-card-content>
+        <div>
+          <button
+            type="submit"
+            mat-raised-button
+            color="accent"
+            [disabled]="locationForm.invalid"
+          >
+            Search
+          </button>
+        </div>
+      </form>
+    </mat-card>
+  </div>
+</div>
